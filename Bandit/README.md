@@ -67,7 +67,17 @@ bandit0@bandit:~$
 ##### Username : bandit1
 ##### Password : boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
-Bandit Level 1 → Level 2
-Level Goal
+### Bandit Level 1 → Level 2
+
+#### Level Goal
+
 The password for the next level is stored in a file called - located in the home directory
 
+#### Solution :
+
+```
+bandit1@bandit:~$ cat ./-
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+```
+##### Username : bandit2
+##### Password : CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
