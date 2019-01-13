@@ -768,3 +768,9 @@ The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ```
 
 bandit11::IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+Bandit Level 11 → Level 12
+
+Level Goal
+
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
