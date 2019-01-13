@@ -192,3 +192,168 @@ The password for the next level is stored somewhere on the server and has all of
 - owned by group bandit6
 - 33 bytes in size
 
+
+#### Something strange happened. God access ?
+
+```
+bandit6@bandit:~$ ls -la
+total 20
+drwxr-xr-x  2 root root 4096 Oct 16 14:00 .
+drwxr-xr-x 41 root root 4096 Oct 16 14:00 ..
+-rw-r--r--  1 root root  220 May 15  2017 .bash_logout
+-rw-r--r--  1 root root 3526 May 15  2017 .bashrc
+-rw-r--r--  1 root root  675 May 15  2017 .profile
+bandit6@bandit:~$ cd ..
+bandit6@bandit:/home$ ls
+bandit0   bandit14  bandit2   bandit25      bandit29      bandit31-git  bandit7
+bandit1   bandit15  bandit20  bandit26      bandit29-git  bandit32      bandit8
+bandit10  bandit16  bandit21  bandit27      bandit3       bandit33      bandit9
+bandit11  bandit17  bandit22  bandit27-git  bandit30      bandit4
+bandit12  bandit18  bandit23  bandit28      bandit30-git  bandit5
+bandit13  bandit19  bandit24  bandit28-git  bandit31      bandit6
+bandit6@bandit:/home$ cd ..
+bandit6@bandit:/$ ls
+bin      home            lib64       opt         sbin   usr
+boot     initrd.img      libx32      proc        share  var
+cgroup2  initrd.img.old  lost+found  README.txt  srv    vmlinuz
+dev      lib             media       root        sys    vmlinuz.old
+etc      lib32           mnt         run         tmp
+bandit6@bandit:/$ find ./ -type f -size 33c
+find: ‘./run/lvm’: Permission denied
+find: ‘./run/screen/S-bandit20’: Permission denied
+find: ‘./run/screen/S-bandit2’: Permission denied
+find: ‘./run/screen/S-bandit17’: Permission denied
+find: ‘./run/screen/S-bandit15’: Permission denied
+find: ‘./run/screen/S-bandit14’: Permission denied
+find: ‘./run/screen/S-bandit9’: Permission denied
+find: ‘./run/screen/S-bandit8’: Permission denied
+find: ‘./run/screen/S-bandit31’: Permission denied
+find: ‘./run/screen/S-bandit30’: Permission denied
+find: ‘./run/screen/S-bandit21’: Permission denied
+find: ‘./run/screen/S-bandit26’: Permission denied
+find: ‘./run/screen/S-bandit3’: Permission denied
+find: ‘./run/screen/S-bandit5’: Permission denied
+find: ‘./run/screen/S-bandit25’: Permission denied
+find: ‘./run/screen/S-bandit4’: Permission denied
+find: ‘./run/screen/S-bandit1’: Permission denied
+find: ‘./run/screen/S-bandit0’: Permission denied
+find: ‘./run/screen/S-bandit13’: Permission denied
+find: ‘./run/screen/S-bandit27’: Permission denied
+find: ‘./run/screen/S-bandit22’: Permission denied
+find: ‘./run/screen/S-bandit12’: Permission denied
+find: ‘./run/screen/S-bandit23’: Permission denied
+find: ‘./run/screen/S-bandit19’: Permission denied
+find: ‘./run/screen/S-bandit16’: Permission denied
+find: ‘./run/screen/S-bandit24’: Permission denied
+find: ‘./run/shm’: Permission denied
+find: ‘./run/lock/lvm’: Permission denied
+./var/spool/bandit24/bandit23/output_from_run_delete_script.sh
+find: ‘./var/spool/rsyslog’: Permission denied
+find: ‘./var/spool/cron/crontabs’: Permission denied
+find: ‘./var/log’: Permission denied
+find: ‘./var/tmp’: Permission denied
+find: ‘./var/cache/ldconfig’: Permission denied
+find: ‘./var/cache/apt/archives/partial’: Permission denied
+./var/lib/dbus/machine-id
+./var/lib/dpkg/info/bandit7.password
+./var/lib/dpkg/info/libcurl3-gnutls:amd64.shlibs
+./var/lib/dpkg/info/libkrb5support0:amd64.shlibs
+find: ‘./var/lib/apt/lists/partial’: Permission denied
+find: ‘./var/lib/polkit-1’: Permission denied
+./usr/include/x86_64-linux-gnu/asm/sockios.h
+./usr/include/x86_64-linux-gnu/asm/termios.h
+./usr/lib/grub/i386-pc/video.lst
+./usr/lib/python2.7/dist-packages/PILcompat/ImageCrackCode.py
+./usr/lib/python2.7/dist-packages/PILcompat/PngImagePlugin.py
+./usr/lib/tmpfiles.d/man-db.conf
+./usr/share/doc/python-pam/AUTHORS
+./usr/share/doc/eject/AUTHORS
+find: ‘./cgroup2/csessions’: Permission denied
+./home/bandit3/inhere/.hidden
+./home/bandit16/.bandit15.password
+./home/bandit2/spaces in this filename
+find: ‘./home/bandit28-git’: Permission denied
+./home/bandit21/.prevpass
+./home/bandit0/readme
+find: ‘./home/bandit30-git’: Permission denied
+find: ‘./home/bandit31-git’: Permission denied
+./home/bandit17/.bandit16.password
+./home/bandit1/-
+./home/bandit25/.bandit24.password
+find: ‘./home/bandit5/inhere’: Permission denied
+find: ‘./home/bandit27-git’: Permission denied
+./home/bandit4/inhere/-file09
+./home/bandit4/inhere/-file06
+./home/bandit4/inhere/-file01
+./home/bandit4/inhere/-file02
+./home/bandit4/inhere/-file05
+./home/bandit4/inhere/-file03
+./home/bandit4/inhere/-file08
+./home/bandit4/inhere/-file07
+./home/bandit4/inhere/-file04
+./home/bandit4/inhere/-file00
+./home/bandit18/readme
+./home/bandit15/.bandit14.password
+find: ‘./home/bandit29-git’: Permission denied
+find: ‘./tmp’: Permission denied
+find: ‘./lost+found’: Permission denied
+find: ‘./root’: Permission denied
+./etc/bandit_pass/bandit3
+./etc/bandit_pass/bandit16
+./etc/bandit_pass/bandit2
+./etc/bandit_pass/bandit31
+./etc/bandit_pass/bandit14
+./etc/bandit_pass/bandit21
+./etc/bandit_pass/bandit32
+./etc/bandit_pass/bandit10
+./etc/bandit_pass/bandit8
+./etc/bandit_pass/bandit33
+./etc/bandit_pass/bandit9
+./etc/bandit_pass/bandit7
+./etc/bandit_pass/bandit27
+./etc/bandit_pass/bandit17
+./etc/bandit_pass/bandit1
+./etc/bandit_pass/bandit30
+./etc/bandit_pass/bandit25
+./etc/bandit_pass/bandit24
+./etc/bandit_pass/bandit23
+./etc/bandit_pass/bandit19
+./etc/bandit_pass/bandit5
+./etc/bandit_pass/bandit4
+./etc/bandit_pass/bandit26
+./etc/bandit_pass/bandit22
+./etc/bandit_pass/bandit28
+./etc/bandit_pass/bandit13
+./etc/bandit_pass/bandit20
+./etc/bandit_pass/bandit29
+./etc/bandit_pass/bandit12
+./etc/bandit_pass/bandit11
+./etc/bandit_pass/bandit18
+./etc/bandit_pass/bandit15
+./etc/bandit_pass/bandit6
+find: ‘./etc/ssl/private’: Permission denied
+find: ‘./etc/lvm/backup’: Permission denied
+find: ‘./etc/lvm/archive’: Permission denied
+find: ‘./etc/polkit-1/localauthority’: Permission denied
+find: ‘./sys/fs/pstore’: Permission denied
+find: ‘./proc/tty/driver’: Permission denied
+find: ‘./proc/7964/task/7964/fdinfo/6’: No such file or directory
+find: ‘./proc/7964/fdinfo/5’: No such file or directory
+./boot/grub/i386-pc/video.lst
+find: ‘./boot/lost+found’: Permission denied
+bandit6@bandit:/$ ./boot/grub/i386-pc/video.lst
+-bash: ./boot/grub/i386-pc/video.lst: Permission denied
+bandit6@bandit:/$ cat
+^C
+bandit6@bandit:/$ cat ./boot/grub/i386-pc/video.lst
+vbe
+vga
+video_bochs
+video_cirrus
+bandit6@bandit:/$ ./var/spool/bandit24/bandit23/output_from_run_delete_script.sh-bash: ./var/spool/bandit24/bandit23/output_from_run_delete_script.sh: Permission denied
+bandit6@bandit:/$ cat ./var/spool/bandit24/bandit23/output_from_run_delete_script.sh
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+bandit6@bandit:/$
+
+
+```
