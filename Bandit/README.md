@@ -752,5 +752,19 @@ bandit10::truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
 
 Bandit Level 10 → Level 11
+
 Level Goal
+
 The password for the next level is stored in the file data.txt, which contains base64 encoded data
+
+
+Solution :
+
+```
+bandit10@bandit:~$ ls
+data.txt
+bandit10@bandit:~$ cat data.txt  | base64 -d
+The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+```
+
+bandit11::IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
