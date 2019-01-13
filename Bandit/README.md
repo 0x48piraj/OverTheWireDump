@@ -369,3 +369,22 @@ Bandit Level 7 → Level 8
 Level Goal
 The password for the next level is stored in the file data.txt next to the word millionth
 
+Solution :
+
+```
+>>> f=open("data.txt", "r").read()
+>>> f.split("millionth")[1]
+"\tcvX2JJa4CFALtqS87jk27qwqGhBM9plV\ncomprehend\tFKVbjZbVgb0d2RU2DlCqSW049xMITQkB\nimprudence\tceeNKBMlu3nE9ZmG11iqXwe1FOfsh17k\nbenchmark\tBlZm92fuvV8NXHUP4QM6oL44CiDVh3I3\nchiselling\tx9cJLrnD1Eq3j3LGQWlfRQxCogL7tqAB\nswash\tzr2qOGA0OdSaILm4pTYj3HiCeUQcmMYH\nDixieland\tLKpbThseZz4d45aLJ5K7uBumeomEiTMj\npitilessly\tBmQkNtZEyY2hglJJnIZriuK9Yt8JbCIM\nlay\tNyNCS9E83dLXeha1nf8vjTMMeUFbBnnW\ncommercial\ (...)
+```
+
+OR SIMPLY 
+
+```
+bandit7@bandit:~$ cat data.txt | grep "millionth"
+millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+bandit7@bandit:~$
+
+```
+
+bandit8::cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
