@@ -354,6 +354,14 @@ bandit6@bandit:/$ ./var/spool/bandit24/bandit23/output_from_run_delete_script.sh
 bandit6@bandit:/$ cat ./var/spool/bandit24/bandit23/output_from_run_delete_script.sh
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 bandit6@bandit:/$
+```
 
+Solution : 
 
 ```
+bandit6@bandit:/$ cat ./var/lib/dpkg/info/bandit7.password
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+```
+
+bandit7::HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
