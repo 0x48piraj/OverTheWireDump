@@ -148,5 +148,6 @@ XS
 bandit4@bandit:~/inhere$
 ```
 
-Username : bandit5
-Passwoerd : koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+Creds : bandit5::koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+
