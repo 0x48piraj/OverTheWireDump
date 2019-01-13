@@ -1042,3 +1042,19 @@ Connection to bandit.labs.overthewire.org closed.
 
 ```
 Googled and found https://superuser.com/questions/624493/corrupted-broadcast-message-when-system-is-going-to-halt-in-debian
+```
+bandit14@bandit:~$ stty --all
+speed 38400 baud; rows 58; columns 210; line = 0;
+intr = ^C; quit = ^\; erase = ^?; kill = ^U; eof = ^D; eol = M-^?; eol2 = M-^?; swtch = <undef>; start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R; werase = ^W; lnext = ^V; discard = ^O; min = 1; time = 0;
+-parenb -parodd -cmspar cs8 -hupcl -cstopb cread -clocal -crtscts
+-ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl ixon -ixoff -iuclc ixany imaxbel iutf8
+opost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0
+isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt echoctl echoke -flusho -extproc
+bandit14@bandit:~$
+
+```
+See the tweet to know what may have happened : https://twitter.com/0x48piraj/status/1084539393342230528
+
+Moving on..
+
+
