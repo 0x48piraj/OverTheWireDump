@@ -1058,3 +1058,20 @@ See the tweet to know what may have happened : https://twitter.com/0x48piraj/sta
 Moving on..
 
 
+Bandit Level 14 → Level 15
+
+Level Goal
+
+The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
+
+Solution :
+
+```
+bandit14@bandit:~$ cat /etc/bandit_pass/bandit14
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+bandit14@bandit:~$ cat /etc/bandit_pass/bandit14 | nc localhost 30000
+Correct!
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+```
+
+bandit15::BfMYroe26WYalil77FoDi9qh59eK5xNr
