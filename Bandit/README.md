@@ -84,6 +84,18 @@ CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 
 
 Bandit Level 2 → Level 3
+
 Level Goal
+
 The password for the next level is stored in a file called spaces in this filename located in the home directory
+
+Solution :
+
+```
+bandit2@bandit:~$ cat "spaces in this filename"
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+```
+
+Username : bandit3
+Password : UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 
