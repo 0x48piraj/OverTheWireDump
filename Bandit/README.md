@@ -120,3 +120,33 @@ bandit3@bandit:~/inhere$
 ```
 Username : bandit4
 Password : pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+Bandit Level 4 → Level 5
+
+Level Goal
+
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+
+Solution : 
+
+```
+bandit4@bandit:~$ ls
+inhere
+bandit4@bandit:~$ cd inhere/
+bandit4@bandit:~/inhere$ ls
+-file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
+bandit4@bandit:~/inhere$ find . -type f -exec cat {} +
+N▒{▒▒Y▒d4▒▒▒]3▒▒▒▒▒9(▒
+Q▒▒▒▒▒@▒%@▒▒▒ZP*E▒▒1▒V▒▒▒̫*▒▒▒ۻ▒▒U"7▒w▒▒▒H▒▒ê▒Q▒▒(▒▒▒#▒▒▒▒T▒v▒▒(▒ִ▒▒▒▒▒A*▒
+2J▒Ş؇_▒y7+▒▒pm▒▒▒;▒▒:D▒▒^▒▒@▒gl▒Q▒▒.A▒▒u▒▒#▒▒▒w$N?c▒-▒▒Db3▒▒=▒▒FPn▒
+                                                                   '▒U▒▒▒M▒▒/u
+XS
+▒mu▒z▒▒▒хkoReBOKuIDDepwhWk7jZC0RTdopnAYKh
+▒=<▒W▒▒▒▒▒ht▒Z▒▒!▒▒{▒U
+▒▒▒▒▒▒~%        C[▒걱>▒▒| ▒
+
+bandit4@bandit:~/inhere$
+```
+
+Username : bandit5
+Passwoerd : koReBOKuIDDepwhWk7jZC0RTdopnAYKh
