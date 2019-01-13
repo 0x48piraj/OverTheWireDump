@@ -1084,3 +1084,163 @@ Level Goal
 The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
 
 Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof and read the “CONNECTED COMMANDS” section in the manpage. Next to ‘R’ and ‘Q’, the ‘B’ command also works in this version of that command…
+
+
+Solution :
+
+```
+bandit15@bandit:~$ ls -la
+total 24
+drwxr-xr-x  2 root     root     4096 Jan 11 14:50 .
+drwxr-xr-x 41 root     root     4096 Oct 16 14:00 ..
+-rw-r-----  1 bandit15 bandit15   33 Jan 11 14:50 .bandit14.password
+-rw-r--r--  1 root     root      220 May 15  2017 .bash_logout
+-rw-r--r--  1 root     root     3526 May 15  2017 .bashrc
+-rw-r--r--  1 root     root      675 May 15  2017 .profile
+bandit15@bandit:~$ cat ./.bandit14.password
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+bandit15@bandit:~$ echo "4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e" | openssl s_client -connect localhost:30001 -ign_eof
+CONNECTED(00000003)
+depth=0 CN = localhost
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = localhost
+verify return:1
+---
+Certificate chain
+ 0 s:/CN=localhost
+   i:/CN=localhost
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICBjCCAW+gAwIBAgIENHv1njANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDDAls
+b2NhbGhvc3QwHhcNMTkwMTEzMTkzNDMwWhcNMjAwMTEzMTkzNDMwWjAUMRIwEAYD
+VQQDDAlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALOkCuqD
+hi2X8nQ1Fu/p2hHx+3SeORNWt76H7Q/Wr8ZYapwViACu7h/d+Gn1Z4/1ZVN5Ukz3
+fiS7UiA73eJg2iLo9rXzPw01hVB+IA4RtSTBmsUm7vwIgNDv5RsrYLl6JCGaZ+ns
+/z5ihBHILWT3zvLyAn98HUiVAjAahiuwBtHxAgMBAAGjZTBjMBQGA1UdEQQNMAuC
+CWxvY2FsaG9zdDBLBglghkgBhvhCAQ0EPhY8QXV0b21hdGljYWxseSBnZW5lcmF0
+ZWQgYnkgTmNhdC4gU2VlIGh0dHBzOi8vbm1hcC5vcmcvbmNhdC8uMA0GCSqGSIb3
+DQEBBQUAA4GBABiUJgikW8Ig5kuqkB3VCZiACRm5bsC4T5EH531RtzDi6Yywnqm3
+xDbfWzLIoWpVq2U2pViIVsPmQ6nGjASQSlQhxsg9kZBaqYB26AcgrmbVIruywtij
+JXvZkb10yrXeqtfK5bO8+kILa8XSBVbIXQ55Cn4HiHE7NtDZBOLBTl2/
+-----END CERTIFICATE-----
+subject=/CN=localhost
+issuer=/CN=localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1019 bytes and written 269 bytes
+Verification error: self signed certificate
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 990EEA60C329C272E5DB60F5D07150C928302ED6D7A73C6D61F76EC8CBE217B4
+    Session-ID-ctx:
+    Master-Key: 8B4E7E157CFFD696925B3E3C5BB64B927980622E6FEACC9CBC36146399CEE88CE86566EF41F0E7F251F926B9A2522D8C
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - 32 a4 5b 29 4b c8 06 db-a5 7e c7 95 4f fd c4 c1   2.[)K....~..O...
+    0010 - 55 74 96 eb 51 c5 51 aa-4c c6 07 45 69 67 73 f3   Ut..Q.Q.L..Eigs.
+    0020 - 99 19 b3 ef 7a 77 ca ba-b3 32 e2 38 cc fd ce 27   ....zw...2.8...'
+    0030 - fa 1b e1 ce a0 39 36 66-d2 7e ab f5 5d 08 4d 37   .....96f.~..].M7
+    0040 - 67 bb ad b3 01 5c fb 1e-1c 4c 71 04 6d d8 a8 6c   g....\...Lq.m..l
+    0050 - 71 be 7a 83 87 d7 1e b8-3a 21 5c a1 27 e1 cc 5e   q.z.....:!\.'..^
+    0060 - 7a 59 25 fa 51 4b 29 dc-6c a3 31 22 27 0e 45 3e   zY%.QK).l.1"'.E>
+    0070 - a7 e8 c2 0e 18 f0 f8 54-cb 8f 9a 24 6c 89 23 49   .......T...$l.#I
+    0080 - b0 95 cc 00 f2 0c 2b d1-ef 16 33 82 88 2a 16 16   ......+...3..*..
+    0090 - 40 cc 31 c7 2e f9 db 58-2c 02 f8 ff d5 39 0d 4f   @.1....X,....9.O
+
+    Start Time: 1547411586
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self signed certificate)
+    Extended master secret: yes
+---
+Wrong! Please enter the correct current password
+closed
+bandit15@bandit:~$ echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect localhost:30001 -ign_eof
+CONNECTED(00000003)
+depth=0 CN = localhost
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = localhost
+verify return:1
+---
+Certificate chain
+ 0 s:/CN=localhost
+   i:/CN=localhost
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICBjCCAW+gAwIBAgIENHv1njANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDDAls
+b2NhbGhvc3QwHhcNMTkwMTEzMTkzNDMwWhcNMjAwMTEzMTkzNDMwWjAUMRIwEAYD
+VQQDDAlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALOkCuqD
+hi2X8nQ1Fu/p2hHx+3SeORNWt76H7Q/Wr8ZYapwViACu7h/d+Gn1Z4/1ZVN5Ukz3
+fiS7UiA73eJg2iLo9rXzPw01hVB+IA4RtSTBmsUm7vwIgNDv5RsrYLl6JCGaZ+ns
+/z5ihBHILWT3zvLyAn98HUiVAjAahiuwBtHxAgMBAAGjZTBjMBQGA1UdEQQNMAuC
+CWxvY2FsaG9zdDBLBglghkgBhvhCAQ0EPhY8QXV0b21hdGljYWxseSBnZW5lcmF0
+ZWQgYnkgTmNhdC4gU2VlIGh0dHBzOi8vbm1hcC5vcmcvbmNhdC8uMA0GCSqGSIb3
+DQEBBQUAA4GBABiUJgikW8Ig5kuqkB3VCZiACRm5bsC4T5EH531RtzDi6Yywnqm3
+xDbfWzLIoWpVq2U2pViIVsPmQ6nGjASQSlQhxsg9kZBaqYB26AcgrmbVIruywtij
+JXvZkb10yrXeqtfK5bO8+kILa8XSBVbIXQ55Cn4HiHE7NtDZBOLBTl2/
+-----END CERTIFICATE-----
+subject=/CN=localhost
+issuer=/CN=localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1019 bytes and written 269 bytes
+Verification error: self signed certificate
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: FEFB0CD2836210ECEEF0C86C8D42E284CE0199A270287149512C4C61495311F4
+    Session-ID-ctx:
+    Master-Key: 1C4E006F6E4652778DC657007C305F4EA524F1CFA945A0C1D0E0D2AC3ABE1EF24A12BCD24CD4878037EDD24B7803F0C5
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - 32 a4 5b 29 4b c8 06 db-a5 7e c7 95 4f fd c4 c1   2.[)K....~..O...
+    0010 - 33 41 48 ad db 9a 4c 73-df f6 1b 81 15 b8 75 9e   3AH...Ls......u.
+    0020 - c4 b7 ef e0 75 c8 32 e2-64 00 24 f6 da 4f 36 34   ....u.2.d.$..O64
+    0030 - e1 20 91 1f 3d 42 95 c2-8a ec 08 cc d6 3d 12 c4   . ..=B.......=..
+    0040 - 33 5d 99 47 dc 47 c3 cc-de 41 7a 66 8d f6 04 60   3].G.G...Azf...`
+    0050 - 20 b1 ed 50 85 cd ef af-39 7d aa e2 bd bc 2b b8    ..P....9}....+.
+    0060 - df 28 36 51 2f 1a 8a 3f-fa fb 49 67 7f b6 da 89   .(6Q/..?..Ig....
+    0070 - 88 1a 2c 30 74 45 a5 9c-52 3a d7 47 b8 3b f9 47   ..,0tE..R:.G.;.G
+    0080 - 53 7b c8 88 35 45 3b a0-7e 58 50 67 3f 6b 05 a6   S{..5E;.~XPg?k..
+    0090 - 06 ef ab e0 3e 2c 81 bd-eb 69 c4 57 0d 3d b7 4c   ....>,...i.W.=.L
+
+    Start Time: 1547411609
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self signed certificate)
+    Extended master secret: yes
+---
+Correct!
+cluFn7wTiGryunymYOu4RcffSxQluehd
+
+```
+bandit16::cluFn7wTiGryunymYOu4RcffSxQluehd
