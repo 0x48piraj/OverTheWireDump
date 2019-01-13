@@ -748,3 +748,9 @@ hꨁ▒r▒15▒@$~▒▒▒▒P@'▒▒ا▒I▒Q
 ```
 
 bandit10::truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+
+
+Bandit Level 10 → Level 11
+Level Goal
+The password for the next level is stored in the file data.txt, which contains base64 encoded data
