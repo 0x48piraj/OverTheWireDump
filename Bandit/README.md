@@ -918,3 +918,127 @@ The password for the next level is stored in /etc/bandit_pass/bandit14 and can o
 Note: localhost is a hostname that refers to the machine you are working on
 
 
+Solution :
+
+```
+bandit13@bandit:~$ ls
+sshkey.private
+bandit13@bandit:~$ cat sshkey.private
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAxkkOE83W2cOT7IWhFc9aPaaQmQDdgzuXCv+ppZHa++buSkN+
+gg0tcr7Fw8NLGa5+Uzec2rEg0WmeevB13AIoYp0MZyETq46t+jk9puNwZwIt9XgB
+ZufGtZEwWbFWw/vVLNwOXBe4UWStGRWzgPpEeSv5Tb1VjLZIBdGphTIK22Amz6Zb
+ThMsiMnyJafEwJ/T8PQO3myS91vUHEuoOMAzoUID4kN0MEZ3+XahyK0HJVq68KsV
+ObefXG1vvA3GAJ29kxJaqvRfgYnqZryWN7w3CHjNU4c/2Jkp+n8L0SnxaNA+WYA7
+jiPyTF0is8uzMlYQ4l1Lzh/8/MpvhCQF8r22dwIDAQABAoIBAQC6dWBjhyEOzjeA
+J3j/RWmap9M5zfJ/wb2bfidNpwbB8rsJ4sZIDZQ7XuIh4LfygoAQSS+bBw3RXvzE
+pvJt3SmU8hIDuLsCjL1VnBY5pY7Bju8g8aR/3FyjyNAqx/TLfzlLYfOu7i9Jet67
+xAh0tONG/u8FB5I3LAI2Vp6OviwvdWeC4nOxCthldpuPKNLA8rmMMVRTKQ+7T2VS
+nXmwYckKUcUgzoVSpiNZaS0zUDypdpy2+tRH3MQa5kqN1YKjvF8RC47woOYCktsD
+o3FFpGNFec9Taa3Msy+DfQQhHKZFKIL3bJDONtmrVvtYK40/yeU4aZ/HA2DQzwhe
+ol1AfiEhAoGBAOnVjosBkm7sblK+n4IEwPxs8sOmhPnTDUy5WGrpSCrXOmsVIBUf
+laL3ZGLx3xCIwtCnEucB9DvN2HZkupc/h6hTKUYLqXuyLD8njTrbRhLgbC9QrKrS
+M1F2fSTxVqPtZDlDMwjNR04xHA/fKh8bXXyTMqOHNJTHHNhbh3McdURjAoGBANkU
+1hqfnw7+aXncJ9bjysr1ZWbqOE5Nd8AFgfwaKuGTTVX2NsUQnCMWdOp+wFak40JH
+PKWkJNdBG+ex0H9JNQsTK3X5PBMAS8AfX0GrKeuwKWA6erytVTqjOfLYcdp5+z9s
+8DtVCxDuVsM+i4X8UqIGOlvGbtKEVokHPFXP1q/dAoGAcHg5YX7WEehCgCYTzpO+
+xysX8ScM2qS6xuZ3MqUWAxUWkh7NGZvhe0sGy9iOdANzwKw7mUUFViaCMR/t54W1
+GC83sOs3D7n5Mj8x3NdO8xFit7dT9a245TvaoYQ7KgmqpSg/ScKCw4c3eiLava+J
+3btnJeSIU+8ZXq9XjPRpKwUCgYA7z6LiOQKxNeXH3qHXcnHok855maUj5fJNpPbY
+iDkyZ8ySF8GlcFsky8Yw6fWCqfG3zDrohJ5l9JmEsBh7SadkwsZhvecQcS9t4vby
+9/8X4jS0P8ibfcKS4nBP+dT81kkkg5Z5MohXBORA7VWx+ACohcDEkprsQ+w32xeD
+qT1EvQKBgQDKm8ws2ByvSUVs9GjTilCajFqLJ0eVYzRPaY6f++Gv/UVfAPV4c+S0
+kAWpXbv5tbkkzbS0eaLPTKgLzavXtQoTtKwrjpolHKIHUz6Wu+n4abfAIRFubOdN
+/+aLoRQ0yBDRbdXMsZN/jvY44eM+xRLdRVyMmdPtP8belRi2E2aEzA==
+-----END RSA PRIVATE KEY-----
+bandit13@bandit:~$exit
+```
+ON MY SYSTEM :
+
+```
+$ chmod 600 privkey.txt
+$ ssh -i privkey.txt bandit14@bandit.labs.overthewire.org -p 2220
+```
+#### Wait! What? What the ..
+
+##### LOGGED TIME : `Sun Jan 13 20:19:24 2019`
+
+```
+Enjoy your stay!
+
+bandit14@bandit:~$ 
+
+bandit14@bandit:~$ ls
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:19:24 2019):        
+                                                                               
+
+sorry, smal reboot coming up.                                                  
+
+no time no time letz do some crime                                             
+
+happy whatever day it is                                                       
+
+cheers                                                                         
+
+morla                                                                          
+                                                                             
+
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:20:18 2019):
+The system is going DOWN for reboot in 10 minutes!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:21:18 2019):
+The system is going DOWN for reboot in 9 minutes!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:22:18 2019):
+The system is going DOWN for reboot in 8 minutes!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:23:18 2019):
+The system is going DOWN for reboot in 7 minutes!
+
+ls -la
+
+total 24
+
+drwxr-xr-x  3 root root 4096 Oct 16 14:00 .
+
+drwxr-xr-x 41 root root 4096 Oct 16 14:00 ..
+
+-rw-r--r--  1 root root  220 May 15  2017 .bash_logout
+
+-rw-r--r--  1 root root 3526 May 15  2017 .bashrc
+
+-rw-r--r--  1 root root  675 May 15  2017 .profile
+
+drwxr-xr-x  2 root root 4096 Oct 16 14:00 .ssh
+
+bandit14@bandit:~$ 
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:24:18 2019):
+The system is going DOWN for reboot in 6 minutes!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:25:18 2019):
+The system is going DOWN for reboot in 5 minutes!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:26:18 2019):
+The system is going DOWN for reboot in 4 minutes!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:27:18 2019):
+The system is going DOWN for reboot in 3 minutes!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:28:18 2019):
+The system is going DOWN for reboot in 2 minutes!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:29:18 2019):
+The system is going DOWN for reboot in 1 minute!
+
+Broadcast message from root@bandit (pts/24) (Sun Jan 13 20:30:18 2019):
+
+The system is going down for reboot NOW!
+Connection to bandit.labs.overthewire.org closed by remote host.
+Connection to bandit.labs.overthewire.org closed.
+
+
+```
+Googled and found https://superuser.com/questions/624493/corrupted-broadcast-message-when-system-is-going-to-halt-in-debian
