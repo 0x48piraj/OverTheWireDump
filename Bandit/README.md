@@ -875,7 +875,37 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 -----END RSA PRIVATE KEY-----
 
 ```
-Want to find out what I left? Go and find out!
+Want to find out what I left? Go and find out! (Also check `/tmp/0x48piraj`)
 
 Solution :
+
+```
+bandit12@bandit:/tmp/myname123$ mkdir /tmp/0x48piraj
+bandit12@bandit:/tmp/myname123$ cp /home/bandit12/data.txt /tmp/0x48piraj
+bandit12@bandit:/tmp/myname123$ cd /tmp/0x48piraj
+bandit12@bandit:/tmp/0x48piraj$ ls
+data.txt
+bandit12@bandit:/tmp/0x48piraj$ xxd -r data.txt data.bin
+bandit12@bandit:/tmp/0x48piraj$ file data.bin
+data.bin: gzip compressed data, was "data2.bin", last modified: Tue Oct 16 12:00                                                                                                             :23 2018, max compression, from Unix
+
+bandit12@bandit:/tmp/0x48piraj$ zcat data.bin | file -
+/dev/stdin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/0x48piraj$ zcat data.bin | bzcat | file -
+/dev/stdin: gzip compressed data, was "data4.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix
+bandit12@bandit:/tmp/0x48piraj$ zcat data.bin | bzcat | zcat | file -
+/dev/stdin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/0x48piraj$ zcat data.bin | bzcat | zcat | tar xO | file -
+/dev/stdin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/0x48piraj$ zcat data.bin | bzcat | zcat | tar xO | tar xO | file -
+/dev/stdin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/0x48piraj$ zcat data.bin | bzcat | zcat | tar xO | tar xO | bzcat | tar xO | zcat | file -
+/dev/stdin: ASCII text
+bandit12@bandit:/tmp/0x48piraj$ zcat data.bin | bzcat | zcat | tar xO | tar xO | bzcat | tar xO | zcat
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+bandit12@bandit:/tmp/0x48piraj$
+```
+Script for automation ? Not now.
+
+bandit13::8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
