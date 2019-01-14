@@ -1447,3 +1447,38 @@ There is a setuid binary in the homedirectory that does the following: it makes 
 NOTE: Try connecting to your own network daemon to see if it works as you think
 
 
+Solution :
+
+DIGGING IN WRONG DIRECTION (thought, the nc service is already running on some port)
+```
+bandit20@bandit:~$ nc -zv localhost 1-100000
+localhost [127.0.0.1] 31960 (?) open
+localhost [127.0.0.1] 31790 (?) open
+localhost [127.0.0.1] 31691 (?) open
+localhost [127.0.0.1] 31518 (?) open
+localhost [127.0.0.1] 31046 (?) open
+localhost [127.0.0.1] 30002 (?) open
+localhost [127.0.0.1] 30001 (?) open
+localhost [127.0.0.1] 30000 (?) open
+localhost [127.0.0.1] 6011 (?) open
+localhost [127.0.0.1] 113 (auth) open
+localhost [127.0.0.1] 22 (ssh) open
+bandit20@bandit:~$ ./suconnect 30002
+Read: I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secr
+ERROR: This doesn't match the current password!
+bandit20@bandit:~$ 
+```
+
+```
+bandit20@bandit:~$ echo “GbKksEFF4yrVs6il55v6gwY5aVje5f0j” | nc -l -p 3333 & disown
+[4] 20621
+bandit20@bandit:~$ ./suconnect 3333
+Read: “GbKksEFF4yrVs6il55v6gwY5aVje5f0j”
+ERROR: This doesn't match the current password!
+FAIL!
+[3]+  Done                    echo “GbKksEFF4yrVs6il55v6gwY5aVje5f0j” | nc -l -p 3333
+bandit20@bandit:~$ 
+```
+
+
+
