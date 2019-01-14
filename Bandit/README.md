@@ -1425,8 +1425,16 @@ Level Goal
 
 To gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary.
 
+Solution :
 
-
+```
+bandit19@bandit:~$ ls -l
+total 8
+-rwsr-x--- 1 bandit20 bandit19 7296 Oct 16 14:00 bandit20-do
+bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+```
+bandit20::GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 
 
 
