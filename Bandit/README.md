@@ -1252,3 +1252,120 @@ Level Goal
 The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.
 
 
+Solution :
+
+```
+bandit16@bandit:~$ cat ./.bandit15.password 
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+bandit16@bandit:~$ nc -zv localhost  31000-32000
+localhost [127.0.0.1] 31960 (?) open
+localhost [127.0.0.1] 31790 (?) open
+localhost [127.0.0.1] 31691 (?) open
+localhost [127.0.0.1] 31518 (?) open
+localhost [127.0.0.1] 31046 (?) open
+bandit16@bandit:~$ echo "cluFn7wTiGryunymYOu4RcffSxQluehd" | openssl s_client -connect localhost:31790 -ign_eof
+CONNECTED(00000003)
+depth=0 CN = localhost
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = localhost
+verify return:1
+---
+Certificate chain
+ 0 s:/CN=localhost
+   i:/CN=localhost
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICBjCCAW+gAwIBAgIELHlSDDANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDDAls
+b2NhbGhvc3QwHhcNMTkwMTEzMTkzNDMwWhcNMjAwMTEzMTkzNDMwWjAUMRIwEAYD
+VQQDDAlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ4UdWRN
+ZmKD+47wp9PM6kCsCLM6u3WD1ByGlnJn3HeILlCxId2oaklGkOx/BzYcX8m0U+wU
+XrC8/lC0o1YHfgfCaVht4ubhmrlD4iUnY7pABtIsrIdLgz/Ee54121GG2+ZZfmpq
+mMytFoWyHSQUNFtavUMPYkzNCI8FO7GiLIZrAgMBAAGjZTBjMBQGA1UdEQQNMAuC
+CWxvY2FsaG9zdDBLBglghkgBhvhCAQ0EPhY8QXV0b21hdGljYWxseSBnZW5lcmF0
+ZWQgYnkgTmNhdC4gU2VlIGh0dHBzOi8vbm1hcC5vcmcvbmNhdC8uMA0GCSqGSIb3
+DQEBBQUAA4GBAEtU/dx2IFDG7q3IcOmYkrvzHlmUKMXPiQqJgim/nzAo89is3A2B
+S9+oWaaCX+Z5Hz97h7nJNFQHTjpoKKP0wS7ZqdpXFXFOVa4rD12hPEebqE/fCPiC
+bOoJkI78ZtUg3fbal8XPHyQK4QcOfgfVAIjSgoUfiNJYQz+0Yqh6EMEp
+-----END CERTIFICATE-----
+subject=/CN=localhost
+issuer=/CN=localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1019 bytes and written 269 bytes
+Verification error: self signed certificate
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 538FC81ECC2E3405870F6B3904468BBDF9639DDA0B31FE9F3BC147DFF0D97829
+    Session-ID-ctx: 
+    Master-Key: 9E21E97840227617B0033BF847D9638C34D0242EDE8836171FC84385E4A2C017255990A39C17073D78D9043F823E49FD
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - fe 2e da f4 cd cd e9 23-46 73 02 6e ca e6 93 3a   .......#Fs.n...:
+    0010 - 95 51 a8 7c ab 0b 88 1b-ac d1 63 fb bf d5 4d a7   .Q.|......c...M.
+    0020 - c6 63 a5 47 d6 49 00 d1-7b 44 77 e6 26 11 76 cd   .c.G.I..{Dw.&.v.
+    0030 - da 82 09 04 bb 80 e0 24-1c 8b ba e3 a5 fd cc a6   .......$........
+    0040 - 82 f6 88 ba 82 75 c2 d2-2b 99 6f ab 76 3d 20 92   .....u..+.o.v= .
+    0050 - ae 05 bb 57 12 16 a5 ee-3c e4 d5 e7 88 32 79 3a   ...W....<....2y:
+    0060 - 76 37 ba da 28 b0 84 ba-f8 a9 1e 85 74 21 ae 28   v7..(.......t!.(
+    0070 - 17 4b 6f d7 c8 5d 50 18-a5 65 5a 10 dd 39 9c f0   .Ko..]P..eZ..9..
+    0080 - 2c 79 45 ba ae af 82 95-76 02 61 44 dd 19 94 75   ,yE.....v.aD...u
+    0090 - fc 2d 04 e4 84 18 6c 96-75 1a 68 26 67 9c c4 d1   .-....l.u.h&g...
+
+    Start Time: 1547480514
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self signed certificate)
+    Extended master secret: yes
+---
+Correct!
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
+imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
+Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
+DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
+JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
+x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
+KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
+J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
+d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
+YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
+vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
++TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
+8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
+SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
+HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
+SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
+R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
+Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
+R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
+L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
+blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
+YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
+77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
+dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
+-----END RSA PRIVATE KEY-----
+
+closed
+bandit16@bandit:~$ exit
+
+root@kali:~# chmod 600 rsa_lvl17.txt
+root@kali:~# ssh -i rsa_lvl17.txt bandit17@bandit.labs.overthewire.org -p 2220
+```
+
+bandit17::RSA_PRIV_KEY
