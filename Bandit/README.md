@@ -1051,8 +1051,8 @@ intr = ^C; quit = ^\; erase = ^?; kill = ^U; eof = ^D; eol = M-^?; eol2 = M-^?; 
 opost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0
 isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt echoctl echoke -flusho -extproc
 bandit14@bandit:~$
-
 ```
+
 See the tweet to know what may have happened : https://twitter.com/0x48piraj/status/1084539393342230528
 
 Moving on..
@@ -1488,7 +1488,31 @@ Level Goal
 
 A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
 
+Solution :
 
+```
+bandit21@bandit:~$ cd /etc/cron.d/
+bandit21@bandit:/etc/cron.d$ ls -la
+total 24
+drwxr-xr-x  2 root root 4096 Oct 16 14:00 .
+drwxr-xr-x 88 root root 4096 Oct 16 14:00 ..
+-rw-r--r--  1 root root  120 Oct 16 14:00 cronjob_bandit22
+-rw-r--r--  1 root root  122 Oct 16 14:00 cronjob_bandit23
+-rw-r--r--  1 root root  120 Oct 16 14:00 cronjob_bandit24
+-rw-r--r--  1 root root  102 Oct  7  2017 .placeholder
+bandit21@bandit:/etc/cron.d$ cat cronjob_bandit22
+@reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+* * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+bandit21@bandit:/etc/cron.d$ cat /usr/bin/cronjob_bandit22.sh
+#!/bin/bash
+chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+bandit21@bandit:/etc/cron.d$ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+bandit21@bandit:/etc/cron.d$ 
+```
+
+bandit22::Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 
 
 
