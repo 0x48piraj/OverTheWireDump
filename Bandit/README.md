@@ -1481,3 +1481,14 @@ bandit20@bandit:~$
 
 bandit21::gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 
+
+Bandit Level 21 → Level 22
+
+Level Goal
+
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+
+
+
+
