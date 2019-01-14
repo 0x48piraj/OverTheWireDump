@@ -1379,9 +1379,20 @@ There are 2 files in the homedirectory: passwords.old and passwords.new. The pas
 
 NOTE: if you have solved this level and see ‘Byebye!’ when trying to log into bandit18, this is related to the next level, bandit19
 
+Solution :
 
 
+```
+bandit17@bandit:~$ diff passwords.old passwords.new
+42c42
+< hlbSBPAWJmL6WFDb06gpTx1pPButblOA
+---
+> kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 
+```
+
+
+bandit18::kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 
 
 
