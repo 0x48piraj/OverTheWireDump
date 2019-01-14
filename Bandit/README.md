@@ -1470,13 +1470,12 @@ bandit20@bandit:~$
 ```
 
 ```
-bandit20@bandit:~$ echo “GbKksEFF4yrVs6il55v6gwY5aVje5f0j” | nc -l -p 3333 & disown
-[4] 20621
+bandit20@bandit:~$ echo GbKksEFF4yrVs6il55v6gwY5aVje5f0j | nc -l -p 3333 & disown
+[1] 22920
 bandit20@bandit:~$ ./suconnect 3333
-Read: “GbKksEFF4yrVs6il55v6gwY5aVje5f0j”
-ERROR: This doesn't match the current password!
-FAIL!
-[3]+  Done                    echo “GbKksEFF4yrVs6il55v6gwY5aVje5f0j” | nc -l -p 3333
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+Password matches, sending next password
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 bandit20@bandit:~$ 
 ```
 
