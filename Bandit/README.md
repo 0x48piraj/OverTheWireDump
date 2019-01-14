@@ -1545,10 +1545,12 @@ echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
 cat /etc/bandit_pass/$myname > /tmp/$mytarget
 bandit22@bandit:/etc/cron.d$ echo I am user bandit22 | md5sum | cut -d ' ' -f 1
 8169b67bd894ddbb4412f91573b38db3
-bandit22@bandit:/etc/cron.d$ 
+bandit22@bandit:~$ cat /tmp/8169b67bd894ddbb4412f91573b38db3
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+bandit22@bandit:~$ 
 
 ```
 
-bandit23::8169b67bd894ddbb4412f91573b38db3
+bandit23::Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 
 
