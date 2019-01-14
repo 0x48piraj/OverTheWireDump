@@ -1525,5 +1525,30 @@ NOTE: Looking at shell scripts written by other people is a very useful skill. T
 
 
 
+Solution :
+
+```
+bandit22@bandit:~$ cd  /etc/cron.d/
+bandit22@bandit:/etc/cron.d$ ls
+cronjob_bandit22  cronjob_bandit23  cronjob_bandit24
+bandit22@bandit:/etc/cron.d$ cat cronjob_bandit23
+@reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+* * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+bandit22@bandit:/etc/cron.d$ cat /usr/bin/cronjob_bandit23.sh
+#!/bin/bash
+
+myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+bandit22@bandit:/etc/cron.d$ echo I am user bandit22 | md5sum | cut -d ' ' -f 1
+8169b67bd894ddbb4412f91573b38db3
+bandit22@bandit:/etc/cron.d$ 
+
+```
+
+bandit23::8169b67bd894ddbb4412f91573b38db3
 
 
