@@ -1605,6 +1605,8 @@ UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 bandit23@bandit:/tmp/0x48piraj$ 
 ```
 
+bandit24::UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
 
 Bandit Level 24 → Level 25
 
