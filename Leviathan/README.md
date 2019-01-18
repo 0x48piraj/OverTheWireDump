@@ -74,3 +74,27 @@ Credential : `leviathan1:rioGegei8m`
 
 > There is no information for this level, intentionally.
 
+
+Solution :
+
+
+Solution :
+
+```
+leviathan1@leviathan:~$ ltrace ./check
+__libc_start_main(0x804853b, 1, 0xffffd794, 0x8048610 <unfinished ...>
+printf("password: ")                                                                                                 = 10
+getchar(1, 0, 0x65766f6c, 0x646f6700password: test
+)                                                                                = 116
+getchar(1, 0, 0x65766f6c, 0x646f6700)                                                                                = 101
+getchar(1, 0, 0x65766f6c, 0x646f6700)                                                                                = 115
+strcmp("tes", "sex")                                                                                                 = 1
+puts("Wrong password, Good Bye ..."Wrong password, Good Bye ...
+)                                                                                 = 29
++++ exited (status 0) +++
+leviathan1@leviathan:~$
+```
+Credential : `leviathan2:sex`
+
+
+
