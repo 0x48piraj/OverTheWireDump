@@ -68,3 +68,9 @@ leviathan0@leviathan:~/.backup$
 
 Credential : `leviathan1:rioGegei8m`
 
+## Leviathan Level 1
+
+#### Level Goal
+
+> There is no information for this level, intentionally.
+
