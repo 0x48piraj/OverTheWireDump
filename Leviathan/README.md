@@ -92,9 +92,22 @@ strcmp("tes", "sex")                                                            
 puts("Wrong password, Good Bye ..."Wrong password, Good Bye ...
 )                                                                                 = 29
 +++ exited (status 0) +++
-leviathan1@leviathan:~$
+$ cd /etc/leviathan_pass
+$ ls
+leviathan0  leviathan1  leviathan2  leviathan3  leviathan4  leviathan5  leviathan6  leviathan7
+$ cat *
+cat: leviathan0: Permission denied
+cat: leviathan1: Permission denied
+ougahZi8Ta
+cat: leviathan3: Permission denied
+cat: leviathan4: Permission denied
+cat: leviathan5: Permission denied
+cat: leviathan6: Permission denied
+cat: leviathan7: Permission denied
+$
+
 ```
-Credential : `leviathan2:sex`
+Credential : `leviathan2:ougahZi8Ta`
 
 
 
