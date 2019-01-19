@@ -260,3 +260,63 @@ leviathan5@leviathan:~$
 ```
 Credential : leviathan6:UgaoFee4li
 
+
+
+```
+leviathan6@leviathan:~$ for i in printf "%s" {0..9}{0..9}{0..9}{0..9}; do ./leviathan6 $i; done
+Wrong
+Wrong
+Wrong
+Wrong
+-bash: fork: retry: Resource temporarily unavailable
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+.
+.
+.
+(...)
+.
+.
+.
+Wrong
+Wrong
+Wrong
+Wrong
+-bash: fork: retry: Resource temporarily unavailable
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+Wrong
+$ whoami
+leviathan7
+$ cat /etc/leviathan_pass/*
+cat: /etc/leviathan_pass/leviathan0: Permission denied
+cat: /etc/leviathan_pass/leviathan1: Permission denied
+cat: /etc/leviathan_pass/leviathan2: Permission denied
+cat: /etc/leviathan_pass/leviathan3: Permission denied
+cat: /etc/leviathan_pass/leviathan4: Permission denied
+cat: /etc/leviathan_pass/leviathan5: Permission denied
+cat: /etc/leviathan_pass/leviathan6: Permission denied
+ahy7MaeBo9
+$
+```
