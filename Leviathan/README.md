@@ -260,7 +260,9 @@ leviathan5@leviathan:~$
 ```
 Credential : leviathan6:UgaoFee4li
 
+## Leviathan Level 6 → Level 7
 
+#### Level Goal
 
 ```
 leviathan6@leviathan:~$ for i in printf "%s" {0..9}{0..9}{0..9}{0..9}; do ./leviathan6 $i; done
