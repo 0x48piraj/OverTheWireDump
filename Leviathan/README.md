@@ -320,3 +320,5 @@ cat: /etc/leviathan_pass/leviathan6: Permission denied
 ahy7MaeBo9
 $
 ```
+
+Credential : `leviathan7:ahy7MaeBo9`
