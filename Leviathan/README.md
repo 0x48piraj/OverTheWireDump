@@ -208,3 +208,52 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 Credential : `leviathan5:Tith4cokei`
+
+
+```
+leviathan5@leviathan:~$ echo "0x48piraj" > /tmp/file.log
+leviathan5@leviathan:~$ ltrace ./leviathan5
+__libc_start_main(0x80485db, 1, 0xffffd794, 0x80486a0 <unfinished ...>
+fopen("/tmp/file.log", "r")                                                                                          = 0x804b008
+fgetc(0x804b008)                                                                                                     = '0'
+feof(0x804b008)                                                                                                      = 0
+putchar(48, 0x8048720, 0xf7e40890, 0x80486eb)                                                                        = 48
+fgetc(0x804b008)                                                                                                     = 'x'
+feof(0x804b008)                                                                                                      = 0
+putchar(120, 0x8048720, 0xf7e40890, 0x80486eb)                                                                       = 120
+fgetc(0x804b008)                                                                                                     = '4'
+feof(0x804b008)                                                                                                      = 0
+putchar(52, 0x8048720, 0xf7e40890, 0x80486eb)                                                                        = 52
+fgetc(0x804b008)                                                                                                     = '8'
+feof(0x804b008)                                                                                                      = 0
+putchar(56, 0x8048720, 0xf7e40890, 0x80486eb)                                                                        = 56
+fgetc(0x804b008)                                                                                                     = 'p'
+feof(0x804b008)                                                                                                      = 0
+putchar(112, 0x8048720, 0xf7e40890, 0x80486eb)                                                                       = 112
+fgetc(0x804b008)                                                                                                     = 'i'
+feof(0x804b008)                                                                                                      = 0
+putchar(105, 0x8048720, 0xf7e40890, 0x80486eb)                                                                       = 105
+fgetc(0x804b008)                                                                                                     = 'r'
+feof(0x804b008)                                                                                                      = 0
+putchar(114, 0x8048720, 0xf7e40890, 0x80486eb)                                                                       = 114
+fgetc(0x804b008)                                                                                                     = 'a'
+feof(0x804b008)                                                                                                      = 0
+putchar(97, 0x8048720, 0xf7e40890, 0x80486eb)                                                                        = 97
+fgetc(0x804b008)                                                                                                     = 'j'
+feof(0x804b008)                                                                                                      = 0
+putchar(106, 0x8048720, 0xf7e40890, 0x80486eb)                                                                       = 106
+fgetc(0x804b008)                                                                                                     = '\n'
+feof(0x804b008)                                                                                                      = 0
+putchar(10, 0x8048720, 0xf7e40890, 0x80486eb0x48piraj
+)                                                                        = 10
+fgetc(0x804b008)                                                                                                     = '\377'
+feof(0x804b008)                                                                                                      = 1
+fclose(0x804b008)                                                                                                    = 0
+getuid()                                                                                                             = 12005
+setuid(12005)                                                                                                        = 0
+unlink("/tmp/file.log")                                                                                              = 0
++++ exited (status 0) +++
+leviathan5@leviathan:~$
+
+```
+
