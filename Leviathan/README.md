@@ -210,6 +210,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 Credential : `leviathan5:Tith4cokei`
 
 
+## Leviathan Level 5 → Level 6
+
+#### Level Goal
+
 ```
 leviathan5@leviathan:~$ echo "0x48piraj" > /tmp/file.log
 leviathan5@leviathan:~$ ltrace ./leviathan5
