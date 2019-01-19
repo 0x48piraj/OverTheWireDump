@@ -257,6 +257,6 @@ leviathan5@leviathan:~$ ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
 leviathan5@leviathan:~$ ./leviathan5
 UgaoFee4li
 leviathan5@leviathan:~$
-
 ```
+Credential : leviathan6:UgaoFee4li
 
