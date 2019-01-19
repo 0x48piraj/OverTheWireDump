@@ -177,3 +177,4 @@ $ cat /etc/leviathan_pass/leviathan4
 vuH0coox6m
 $
 ```
+Credential : `leviathan4:vuH0coox6m`
