@@ -33,3 +33,5 @@ view-source:http://natas1.natas.labs.overthewire.org/
 <!--The password for natas2 is ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi -->
 ```
 
+Credential : natas2:ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
+
