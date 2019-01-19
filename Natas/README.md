@@ -22,6 +22,8 @@ View Source.
 <!--The password for natas1 is gtVrDuiDfck831PqWsLEZy5gyDz1clto -->
 ```
 
+Credential : natas1:gtVrDuiDfck831PqWsLEZy5gyDz1clto
+
 ## Natas Level 0 → Level 1
 
 Username: natas1
