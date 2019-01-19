@@ -196,6 +196,14 @@ drwxr-xr-x 3 root       root       4096 Oct 29 21:17 ..
 -r-sr-x--- 1 leviathan5 leviathan4 7352 Oct 29 21:17 bin
 leviathan4@leviathan:~/.trash$ ./bin
 01010100 01101001 01110100 01101000 00110100 01100011 01101111 01101011 01100101 01101001 00001010
-
+leviathan4@leviathan:~/.trash$ python
+Python 2.7.13 (default, Sep 26 2018, 18:42:22)
+[GCC 6.3.0 20170516] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import binascii
+>>> cipher="01010100 01101001 01110100 01101000 00110100 01100011 01101111 01101011 01100101 01101001 00001010".replace(" ", "")
+>>> binascii.unhexlify('%x' % int(cipher, 2))
+'Tith4cokei\n'
+>>>
 ```
 
