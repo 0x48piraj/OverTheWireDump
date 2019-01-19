@@ -179,6 +179,11 @@ $
 ```
 Credential : `leviathan4:vuH0coox6m`
 
+
+## Leviathan Level 4 → Level 5
+
+#### Level Goal
+
 ```
 leviathan4@leviathan:~$ ls -la
 total 24
