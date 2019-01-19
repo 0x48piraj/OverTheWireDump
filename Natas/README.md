@@ -24,7 +24,7 @@ View Source.
 
 Credential : natas1:gtVrDuiDfck831PqWsLEZy5gyDz1clto
 
-## Natas Level 0 → Level 1
+## Natas Level 1 → Level 2
 
 Username: natas1
 URL:      http://natas1.natas.labs.overthewire.org
@@ -37,7 +37,7 @@ view-source:http://natas1.natas.labs.overthewire.org/
 
 Credential : natas2:ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
 
-
+## Natas Level 2 → Level 3
 ```
 http://natas2.natas.labs.overthewire.org/files/
 http://natas2.natas.labs.overthewire.org/files/users.txt
@@ -50,3 +50,6 @@ natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
 eve:zo4mJWyNj2
 mallory:9urtcpzBmH
 ```
+
+Credential : natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
+
