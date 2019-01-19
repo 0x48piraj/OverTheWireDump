@@ -68,7 +68,7 @@ leviathan0@leviathan:~/.backup$
 
 Credential : `leviathan1:rioGegei8m`
 
-## Leviathan Level 1
+## Leviathan Level 1 → Level 2
 
 #### Level Goal
 
