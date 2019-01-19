@@ -146,6 +146,12 @@ leviathan2@leviathan:/tmp/0x48piraj$
 Credential : `leviathan3:Ahdiemoo1j`
 
 
+## Leviathan Level 3 → Level 4
+
+#### Level Goal
+
+> There is no information for this level, intentionally.
+
 ```
 leviathan3@leviathan:~$ ls
 level3
