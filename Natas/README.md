@@ -16,6 +16,20 @@ URL:      http://natas0.natas.labs.overthewire.org
 
 ## Natas Level 0
 
+View Source.
+
 ```
 <!--The password for natas1 is gtVrDuiDfck831PqWsLEZy5gyDz1clto -->
 ```
+
+## Natas Level 0 → Level 1
+
+Username: natas1
+URL:      http://natas1.natas.labs.overthewire.org
+
+
+```
+view-source:http://natas1.natas.labs.overthewire.org/
+<!--The password for natas2 is ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi -->
+```
+
