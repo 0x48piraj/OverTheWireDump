@@ -15,13 +15,129 @@ Use this password to log in to **krypton.labs.overthewire.org** with username **
 
 #### Solution :
 
+My ticket to Krypton :
+
 ```
 $ echo "S1JZUFRPTklTR1JFQVQ=" | base64 -d
 KRYPTONISGREAT
 ```
 
-Krypton Level 1 → Level 2
+```
+krypton1@krypton:/home$ cd ..
+krypton1@krypton:/$ ls
+README.txt  bin  boot  d  dev  etc  home  krypton  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+krypton1@krypton:/$ cat README.txt
 
-Level Info
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
 
-The password for level 2 is in the file ‘krypton2’. It is ‘encrypted’ using a simple rotation. It is also in non-standard ciphertext format. When using alpha characters for cipher text it is normal to group the letters into 5 letter clusters, regardless of word boundaries. This helps obfuscate any patterns. This file has kept the plain text word boundaries and carried them to the cipher text. Enjoy!
+
+Welcome to the OverTheWire games machine!
+
+If you find any problems, please report them to Steven on
+irc.overthewire.org.
+
+--[ Playing the games ]--
+
+  This machine holds several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ and /proc/ is disabled
+  so that users can not snoop on eachother.
+
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few usefull tools which you can find
+ in the following locations:
+
+    * peda (https://github.com/longld/peda) in /usr/local/peda/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /usr/local/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools) in /usr/local/pwntools/
+    * radare2 (http://www.radare.org/) should be in $PATH
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For questions or comments, contact us through IRC on
+  irc.overthewire.org.
+
+krypton1@krypton:/$ ls
+README.txt  bin  boot  d  dev  etc  home  krypton  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+krypton1@krypton:/$ cd kr*
+krypton1@krypton:/krypton$ ls
+krypton1  krypton2  krypton3  krypton4  krypton5  krypton6
+krypton1@krypton:/krypton$ cd kr*
+krypton1@krypton:/krypton/krypton1$ ls
+README  krypton2
+krypton1@krypton:/krypton/krypton1$ cat README
+Welcome to Krypton!
+
+This game is intended to give hands on experience with cryptography
+and cryptanalysis.  The levels progress from classic ciphers, to modern,
+easy to harder.
+
+Although there are excellent public tools, like cryptool,to perform
+the simple analysis, we strongly encourage you to try and do these
+without them for now.  We will use them in later excercises.
+
+** Please try these levels without cryptool first **
+
+
+The first level is easy.  The password for level 2 is in the file
+'krypton2'.  It is 'encrypted' using a simple rotation called ROT13.
+It is also in non-standard ciphertext format.  When using alpha characters for
+cipher text it is normal to group the letters into 5 letter clusters,
+regardless of word boundaries.  This helps obfuscate any patterns.
+
+This file has kept the plain text word boundaries and carried them to
+the cipher text.
+
+Enjoy!
+krypton1@krypton:/krypton/krypton1$ cat kr* | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
+LEVEL TWO PASSWORD ROTTEN
+krypton1@krypton:/krypton/krypton1$
+```
+
