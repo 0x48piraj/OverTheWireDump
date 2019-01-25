@@ -141,3 +141,5 @@ LEVEL TWO PASSWORD ROTTEN
 krypton1@krypton:/krypton/krypton1$
 ```
 
+**Plaintext Credentials :** `krypton2:ROTTEN`
+
