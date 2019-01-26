@@ -152,7 +152,45 @@ The password for level 2 is in the file ‘krypton2’. It is ‘encrypted’ us
 
 Solution :
 
+```
+Brute-Force : All shifts are computed below.
+↓	
++1	NLPDLCTDPLDJ
++2	MKOCKBSCOKCI
++3	LJNBJARBNJBH
++4	KIMAIZQAMIAG
++5	JHLZHYPZLHZF
++6	IGKYGXOYKGYE
++7	HFJXFWNXJFXD
++8	GEIWEVMWIEWC
++9	FDHVDULVHDVB
++10	ECGUCTKUGCUA
++11	DBFTBSJTFBTZ
++12	CAESARISEASY
++13	BZDRZQHRDZRX
++14	AYCQYPGQCYQW
++15	ZXBPXOFPBXPV
++16	YWAOWNEOAWOU
++17	XVZNVMDNZVNT
++18	WUYMULCMYUMS
++19	VTXLTKBLXTLR
++20	USWKSJAKWSKQ
++21	TRVJRIZJVRJP
++22	SQUIQHYIUQIO
++23	RPTHPGXHTPHN
++24	QOSGOFWGSOGM
++25	PNRFNEVFRNFL
+```
 
+##### For Shell Ninjas :
+
+```
+#!/bin/bash
+# Sample usage:
+# ./Ccrack3r.sh <key (1-25)> <input file>
+
+tr 'A-Z' 'a-z' < $2  | tr 'a-z' $( echo {a..z} | sed -r 's/ //g' | sed -r "s/(.{$1})(.*)/\2\1/" )
+```
 
 
 
