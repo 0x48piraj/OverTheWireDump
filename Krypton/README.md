@@ -22,6 +22,14 @@ $ echo "S1JZUFRPTklTR1JFQVQ=" | base64 -d
 KRYPTONISGREAT
 ```
 
+
+Krypton Level 1 → Level 2
+
+Level Info
+
+The password for level 2 is in the file ‘krypton2’. It is ‘encrypted’ using a simple rotation. It is also in non-standard ciphertext format. When using alpha characters for cipher text it is normal to group the letters into 5 letter clusters, regardless of word boundaries. This helps obfuscate any patterns. This file has kept the plain text word boundaries and carried them to the cipher text. Enjoy!
+
+
 ```
 krypton1@krypton:/home$ cd ..
 krypton1@krypton:/$ ls
@@ -144,11 +152,7 @@ krypton1@krypton:/krypton/krypton1$
 **Plaintext Credentials :** `krypton2:ROTTEN`
 
 
-Krypton Level 1 → Level 2
 
-Level Info
-
-The password for level 2 is in the file ‘krypton2’. It is ‘encrypted’ using a simple rotation. It is also in non-standard ciphertext format. When using alpha characters for cipher text it is normal to group the letters into 5 letter clusters, regardless of word boundaries. This helps obfuscate any patterns. This file has kept the plain text word boundaries and carried them to the cipher text. Enjoy!
 
 Solution :
 
@@ -193,4 +197,7 @@ tr 'A-Z' 'a-z' < $2  | tr 'a-z' $( echo {a..z} | sed -r 's/ //g' | sed -r "s/(.{
 ```
 
 Plaintext Credentials : `krypton3:CAESARISEASY`
+
+
+
 
