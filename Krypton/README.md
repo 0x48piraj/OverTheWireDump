@@ -152,8 +152,10 @@ krypton1@krypton:/krypton/krypton1$
 **Plaintext Credentials :** `krypton2:ROTTEN`
 
 
-Krypton Level 2 → Level 3
-Level Info
+### Krypton Level 2 → Level 3
+
+#### Level Info
+
 ROT13 is a simple substitution cipher.
 
 Substitution ciphers are a simple replacement algorithm. In this example of a substitution cipher, we will explore a ‘monoalphebetic’ cipher. Monoalphebetic means, literally, “one alphabet” and you will see why.
