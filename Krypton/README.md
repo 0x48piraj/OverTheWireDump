@@ -192,5 +192,5 @@ Brute-Force : All shifts are computed below.
 tr 'A-Z' 'a-z' < $2  | tr 'a-z' $( echo {a..z} | sed -r 's/ //g' | sed -r "s/(.{$1})(.*)/\2\1/" )
 ```
 
-
+Plaintext Credentials : `krypton3:CAESARISEASY`
 
