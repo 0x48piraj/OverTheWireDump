@@ -287,3 +287,8 @@ After this, the solution was trivial -
 $ cat krypton4 | tr QAZWSXEDCRFVTGBYHNUJMIKOLP A-Z
 WELLD ONETH ELEVE LFOUR PASSW ORDIS BRUTE krypton3@krypton:/krypton/krypton3$
 ```
+
+Or **"WELL DONE THE LEVEL FOUR PASSWORD IS BRUTE"**
+
+
+Plaintext Credentials : `krypton4:BRUTE`
