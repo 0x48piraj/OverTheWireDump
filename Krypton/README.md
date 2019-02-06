@@ -274,5 +274,16 @@ DSNSM YBGVS ENQGW QNBUS KCJDQ ENQIS QGWUJ QJSVL QCNQG WANBM EDJTS JDSAS SJVSX NB
 KSVVW BGSJD SVSIS VXBMN YQUUK BNWCU ANMJS krypton3@krypton:/krypton/krypton3$
 ```
 
+Rather than doing frequency analysis by myself, I delegated the work.
 
+![Using quipqiup](https://i.imgur.com/QmbtfmT.png)
 
+After this, the solution was trivial -
+
+* Mapping the `A-Z` to `Q-P` using the Ciphertext / Plaintext pair. _(a dirty python script)_
+* Passing the known key to `tr`, time to goto level 4.
+
+```
+$ cat krypton4 | tr QAZWSXEDCRFVTGBYHNUJMIKOLP A-Z
+WELLD ONETH ELEVE LFOUR PASSW ORDIS BRUTE krypton3@krypton:/krypton/krypton3$
+```
