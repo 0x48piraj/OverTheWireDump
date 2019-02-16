@@ -476,3 +476,25 @@ Level Info
 FA can break a known key length as well. Lets try one last polyalphabetic cipher, but this time the key length is unknown.
 
 Enjoy.
+
+**Solution :**
+
+We can do statistical analysis and can eventually find the key.
+
+After a while I was able to get,
+
+```
+KEY           FILE
+
+KEYLENGTH --> found2
+
+KEYLTBGTH --> found1
+
+KSYXENGTH --> found3
+```
+
+As it seems, they key should be `KEYLENGTH`
+
+![and it was](files/broke-using-statistical-analysis.png)
+
+And it was ..
