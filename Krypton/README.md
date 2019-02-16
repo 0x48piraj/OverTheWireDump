@@ -499,4 +499,4 @@ As it seems, they key should be `KEYLENGTH`
 
 And it was ..
 
-**Plaintext Credentials :** `krypton6:random`
+**Plaintext Credentials :** `krypton6:RANDOM`
