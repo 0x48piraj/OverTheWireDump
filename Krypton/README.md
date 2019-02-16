@@ -467,3 +467,4 @@ _lol, wut?_
 ![](files/beaufort-cipher-aha.png)
 
 
+**Plaintext Credentials :** `krypton5:CLEARTEXT`
