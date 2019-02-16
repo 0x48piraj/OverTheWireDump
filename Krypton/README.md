@@ -498,3 +498,5 @@ As it seems, they key should be `KEYLENGTH`
 ![and it was](files/broke-using-statistical-analysis.png)
 
 And it was ..
+
+**Plaintext Credentials :** `krypton6:random`
